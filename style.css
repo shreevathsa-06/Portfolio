@@ -174,6 +174,44 @@ section {
     z-index: 2;
 }
 
+/* Instagram-style Profile Picture Area */
+.profile-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    /* Instagram gradient border */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    padding: 6px; /* Gap for the border thickness */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float 6s ease-in-out infinite;
+    z-index: 2;
+    margin-left: auto;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--bg-color); /* Matches background to create the separation gap */
+    background-color: var(--card-bg); /* Fallback */
+    transition: transform 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
 .badge {
     padding: 0.4rem 1rem;
     background: rgba(88, 166, 255, 0.1);
@@ -520,6 +558,28 @@ footer#footer p {
 
 /* Mobile Responsive */
 @media (max-width: 992px) {
+    #hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding-top: 120px;
+        gap: 3rem;
+    }
+    .hero-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-visual {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .profile-container {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 3rem;

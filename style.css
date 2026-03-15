@@ -12,10 +12,10 @@
 }
 
 body.light-theme {
-    --bg-color: #f6f8fa; 
+    --bg-color: #f6f8fa;
     --card-bg: rgba(255, 255, 255, 0.9);
     --border-color: rgba(31, 35, 40, 0.1);
-    --text-primary: #1f2328; 
+    --text-primary: #1f2328;
     --text-secondary: #57606a;
     --accent-color: #0969da;
     --header-bg: rgba(246, 248, 250, 0.85);
@@ -40,7 +40,10 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, .logo {
+h1,
+h2,
+h3,
+.logo {
     font-family: 'Outfit', sans-serif;
 }
 
@@ -101,12 +104,14 @@ nav {
     border-radius: 25px;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--text-primary);
     background: rgba(255, 255, 255, 0.08);
 }
 
-.light-theme .nav-links a:hover, .light-theme .nav-links a.active {
+.light-theme .nav-links a:hover,
+.light-theme .nav-links a.active {
     background: rgba(0, 0, 0, 0.05);
 }
 
@@ -121,7 +126,8 @@ nav {
     gap: 0.75rem;
 }
 
-.icon-btn, .menu-btn {
+.icon-btn,
+.menu-btn {
     background: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-primary);
@@ -180,9 +186,10 @@ section {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    /* Instagram gradient border */
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    padding: 6px; /* Gap for the border thickness */
+    /* Aesthetic gradient border matching the theme */
+    background: var(--gradient);
+    padding: 6px;
+    /* Gap for the border thickness */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,8 +203,10 @@ section {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid var(--bg-color); /* Matches background to create the separation gap */
-    background-color: var(--card-bg); /* Fallback */
+    border: 6px solid var(--bg-color);
+    /* Matches background to create the separation gap */
+    background-color: var(--card-bg);
+    /* Fallback */
     transition: transform 0.3s ease;
 }
 
@@ -207,9 +216,17 @@ section {
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .badge {
@@ -406,8 +423,10 @@ h1 {
 
 .tech-badge {
     padding: 0.4rem 1rem;
-    background: #1e293b; /* Dark navy/slate background from reference */
-    color: #3b82f6 !important; /* Vibrant blue text */
+    background: #1e293b;
+    /* Dark navy/slate background from reference */
+    color: #3b82f6 !important;
+    /* Vibrant blue text */
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 600;
@@ -532,7 +551,8 @@ h1 {
 }
 
 .contact-social-links .social-icon i {
-    font-size: 2rem !important; /* "Midium size" as requested */
+    font-size: 2rem !important;
+    /* "Midium size" as requested */
     color: var(--text-primary);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -565,21 +585,25 @@ footer#footer p {
         padding-top: 120px;
         gap: 3rem;
     }
+
     .hero-content {
         align-items: center;
         display: flex;
         flex-direction: column;
     }
+
     .hero-visual {
         display: flex;
         justify-content: center;
         width: 100%;
     }
+
     .profile-container {
         width: 250px;
         height: 250px;
         margin: 0 auto;
     }
+
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -587,8 +611,10 @@ footer#footer p {
 }
 
 @media (max-width: 768px) {
-    h1 { font-size: 3rem; }
-    
+    h1 {
+        font-size: 3rem;
+    }
+
     .nav-links {
         display: none;
     }
